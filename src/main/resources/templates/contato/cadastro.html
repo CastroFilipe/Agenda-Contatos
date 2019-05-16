@@ -27,20 +27,20 @@
 
 		<div class="container" id="cadastro">
 
-			<form action="/contatos/salvar" method="POST">
+			<form th:action="@{/contatos/salvar}" th:object="${contato}" method="POST">
 
 				<div class="form-row">
 
 					<div class="form-group col-md-4">
 						<label for="nome">Nome</label>
 						<input type="text" class="form-control" id="nome" placeholder="Nome Contato"
-							autofocus="autofocus" name="nome" value="" />
+							autofocus="autofocus" th:field="*{nome}" />
 					</div>
 
 					<div class="form-group col-md-4">
 						<label for="sobrenome">Sobre Nome</label>
 						<input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome Contato"
-							name="sobrenome" value="" />
+						th:field="*{sobreNome}" />
 					</div>
 
 					<div class="form-group col-md-4">
