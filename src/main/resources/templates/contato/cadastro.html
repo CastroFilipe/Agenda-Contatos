@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+
+<head>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+
+
+	<section class="layout-content" layout:fragment="corpo">
+
+		<nav class="navbar navbar-expand-md bg-light">
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<i class="oi oi-caret-right"></i>
+						<span>Novo contato</span>
+					</li>
+				</ul>
+			</div>
+			<a class="btn btn-primary btn-md" href="/contatos/listar" role="button">
+				<span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
+				<span>Listar Contatos</span>
+			</a>
+		</nav>
+
+		<div class="container" id="cadastro">
+
+			<form action="/contatos/salvar" method="POST">
+
+				<div class="form-row">
+
+					<div class="form-group col-md-4">
+						<label for="nome">Nome</label>
+						<input type="text" class="form-control" id="nome" placeholder="Nome Contato"
+							autofocus="autofocus" name="nome" value="" />
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="sobrenome">Sobre Nome</label>
+						<input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome Contato"
+							name="sobrenome" value="" />
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="sexo">Sexo</label>
+						<select id="sexo" class="form-control" name="sexo">
+							<option value="">Selecione</option>
+							<option value="1">Masculino</option>
+							<option value="2">Feminino</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="celular">Celular</label>
+						<input type="tel" class="form-control" id="celular" placeholder="(xx)xxxxx-xxxx" name="celular"
+							value="" />
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="telefone">Telefone</label>
+						<input type="tel" class="form-control" id="telefone" placeholder="(xx)xxxx-xxxx"
+							name="telefone" value="" />
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="email">E-mail</label>
+						<input type="email" class="form-control" id="email" placeholder="user@exemplo.com" name="email"
+							value="" />
+					</div>
+
+					<!--
+					<div class="form-group col-md-4">
+						<label for="password">Password(apenas teste)</label>
+						<input type="password" class="form-control" id="password" placeholder="senha" name="password"
+							value="" />
+					</div>
+
+
+					<div class="form-group col-md-4">
+						<label for="search">Pesquisar(apenas teste)</label>
+						<input type="search" class="form-control" id="search" placeholder="pesquisar" name="search"
+							value="" />
+					</div>
+					-->
+				</div>
+
+				<input type="hidden" id="id" name="id" value="" />
+				<button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+
+			</form>
+		</div>
+
+	</section>
+
+</body>
+
+</html>
